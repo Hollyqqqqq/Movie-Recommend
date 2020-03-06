@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_Movie_UI">
+	<children>
+		<ScrollPane layoutX="64.0" layoutY="61.0" prefHeight="361.0" prefWidth="649.0">
+			<content>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="635.0">
+					<children>
+						<Label layoutX="387.0" layoutY="170.0" text="电影简介" />
+						<Label layoutX="50.0" layoutY="31.0" text="电影名称" />
+						<Label layoutX="50.0" layoutY="75.0" text="类型" />
+						<Label layoutX="408.0" layoutY="109.0" text="上映时间" />
+						<Label layoutX="47.0" layoutY="127.0" text="国家/地区" />
+						<Label layoutX="50.0" layoutY="170.0" text="演员" />
+						<Label layoutX="50.0" layoutY="425.0" text="评论" />
+						<Label layoutX="423.0" layoutY="46.0" text="评分" />
+						<Text fx:id="score" fill="#2b07f0" layoutX="486.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="分数" />
+						<TextField fx:id="movie_name" editable="false" layoutX="116.0" layoutY="26.0" />
+						<TextField fx:id="movie_released" editable="false" layoutX="492.0" layoutY="104.0" prefHeight="30.0" prefWidth="103.0" />
+						<TextField fx:id="movie_country" editable="false" layoutX="120.0" layoutY="122.0" prefHeight="30.0" prefWidth="195.0" />
+						<TextArea fx:id="movie_music" editable="false" layoutX="387.0" layoutY="205.0" prefHeight="142.0" prefWidth="234.0" wrapText="true" />
+						<TableView fx:id="table_comments" layoutX="120.0" layoutY="435.0" prefHeight="200.0" prefWidth="497.0">
+							<columns>
+								<TableColumn fx:id="user_n" editable="false" prefWidth="124.0" sortable="false" text="用户" />
+								<TableColumn fx:id="user_score" editable="false" prefWidth="55.0" sortable="false" text="评分" />
+								<TableColumn fx:id="user_date" prefWidth="90.0" text="日期" />
+								<TableColumn fx:id="user_comments" prefWidth="227.0" text="评论" />
+							</columns>
+						</TableView>
+						<TextArea fx:id="movie_type" editable="false" layoutX="118.0" layoutY="66.0" prefHeight="38.0" prefWidth="200.0" />
+						<TableView fx:id="table_actors" layoutX="99.0" layoutY="190.0" prefHeight="155.0" prefWidth="216.0">
+							<columns>
+								<TableColumn fx:id="actor_name" prefWidth="94.0" text="名字" />
+								<TableColumn fx:id="actor_role" prefWidth="105.0" text="职位" />
+								<TableColumn prefWidth="75.0" text="id" visible="false" />
+							</columns>
+						</TableView>
+					</children>
+				</AnchorPane>
+			</content>
+		</ScrollPane>
+		<Label layoutX="340.0" layoutY="23.0" text="电影信息" textFill="#120be0">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<Button fx:id="button" layoutX="306.0" layoutY="422.0" mnemonicParsing="false" onAction="#goComment" text="看过" />
+		<Button fx:id="button_recommend" layoutX="386.0" layoutY="422.0" mnemonicParsing="false" onAction="#goRecommend" text="推荐给好友" />
+	</children>
+</AnchorPane>

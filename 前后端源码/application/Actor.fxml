@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_Actor">
+	<children>
+		<Label layoutX="92.0" layoutY="46.0" text="名字" />
+		<Label layoutX="92.0" layoutY="103.0" text="性别" />
+		<Label layoutX="92.0" layoutY="157.0" text="出生日期" />
+		<Label layoutX="92.0" layoutY="210.0" text="简介" />
+		<TextField fx:id="actor_name" editable="false" layoutX="180.0" layoutY="41.0" />
+		<Text fx:id="gender" layoutX="180.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gender" />
+		<TextField fx:id="born_time" editable="false" layoutX="180.0" layoutY="152.0" />
+		<TextArea fx:id="intro" editable="false" layoutX="181.0" layoutY="210.0" prefHeight="140.0" prefWidth="200.0" wrapText="true" />
+	</children>
+</AnchorPane>

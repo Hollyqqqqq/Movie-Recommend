@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0"
+	prefWidth="711.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller_Admin_SignIn">
+	<children>
+		<Label layoutX="271.0" layoutY="65.0" text="管理员登录"
+			textFill="#0f34eb">
+			<font>
+				<Font size="24.0" />
+			</font>
+		</Label>
+		<Label layoutX="164.0" layoutY="168.0" text="账号" />
+		<Label layoutX="164.0" layoutY="235.0" text="密码" />
+		<Button fx:id="Button_dl" layoutX="221.0" layoutY="315.0"
+			mnemonicParsing="false" onAction="#ToAdmin" text="登录" />
+		<TextField fx:id="user" layoutX="246.0" layoutY="163.0" />
+		<PasswordField fx:id="pass" layoutX="246.0" layoutY="240.0" />
+		<Button fx:id="Button_fh" layoutX="357.0" layoutY="315.0"
+			mnemonicParsing="false" onAction="#Rtn" text="返回" />
+		<Text fx:id="notice" layoutX="246.0" layoutY="297.0"
+			strokeType="OUTSIDE" strokeWidth="0.0" />
+	</children>
+</AnchorPane>

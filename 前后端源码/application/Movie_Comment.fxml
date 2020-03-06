@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_Movie_Comment">
+	<children>
+		<Label layoutX="128.0" layoutY="113.0" text="评分" />
+		<Label layoutX="128.0" layoutY="180.0" text="评论" />
+		<Button fx:id="button_qr" layoutX="266.0" layoutY="260.0" mnemonicParsing="false" onAction="#getComments" text="发表" />
+		<TextArea fx:id="text_comment" layoutX="200.0" layoutY="175.0" prefHeight="45.0" prefWidth="254.0" />
+		<ChoiceBox fx:id="score" layoutX="200.0" layoutY="108.0" prefWidth="150.0" />
+      <Text fx:id="notice" layoutX="276.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+	</children>
+</AnchorPane>

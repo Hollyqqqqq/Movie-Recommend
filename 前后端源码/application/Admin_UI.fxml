@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_Admin_UI">
+	<children>
+		<TabPane layoutY="51.0" prefHeight="552.0" prefWidth="760.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="添加电影">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="715.0">
+							<children>
+								<Label layoutX="315.0" layoutY="8.0" text="添加电影" textFill="#060ee1">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+								<Button fx:id="button_chooseFile" layoutX="311.0" layoutY="219.0" mnemonicParsing="false" text="选择文件" />
+								<Label layoutX="119.0" layoutY="162.0" text="请选择一个文件添加电影数据，文件的格式必须与所给的样本文件一致" textFill="#f20d0d">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+                        <Text fx:id="insert_notice" layoutX="182.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="396.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+            <Tab text="电影修改">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="134.0" layoutY="89.0" text="电影名称" />
+                        <TextField layoutX="243.0" layoutY="84.0" />
+                        <Button layoutX="527.0" layoutY="84.0" mnemonicParsing="false" text="搜索" />
+                        <TableView layoutX="143.0" layoutY="179.0" prefHeight="200.0" prefWidth="449.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="电影ID" />
+                            <TableColumn prefWidth="168.0" text="电影名称" />
+                              <TableColumn prefWidth="99.0" text="国家/地区" />
+                              <TableColumn prefWidth="106.0" text="上映时间" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="145.0" layoutY="148.0" text="双击修改电影信息" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+				<Tab text="电影删除">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<Label layoutX="139.0" layoutY="98.0" text="电影名称" />
+								<Label layoutX="344.0" layoutY="14.0" text="电影删除" textFill="#2a15eb">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+								<Button fx:id="button_search" layoutX="529.0" layoutY="93.0" mnemonicParsing="false" onAction="#showSearchMovie" text="查询" />
+								<TextField fx:id="search_movie" layoutX="264.0" layoutY="93.0" />
+								<TableView fx:id="table_movie_search" layoutX="117.0" layoutY="172.0" prefHeight="183.0" prefWidth="527.0">
+									<columns>
+										<TableColumn fx:id="search_movie_id" prefWidth="82.0" text="电影ID" />
+										<TableColumn fx:id="search_movie_name" prefWidth="162.0" text="电影名称" />
+										<TableColumn fx:id="search_movie_country" prefWidth="119.0" text="国家/地区" />
+										<TableColumn fx:id="search_movie_year" prefWidth="91.0" text="上映时间" />
+										<TableColumn fx:id="search_movie_score" prefWidth="71.0" text="评分" />
+									</columns>
+								</TableView>
+								<Label layoutX="120.0" layoutY="144.0" text="双击删除电影" />
+								<Label layoutX="146.0" layoutY="368.0" text="确认删除电影" />
+								<Text fx:id="delete_notice" layoutX="313.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+								<Button fx:id="button_delete" layoutX="217.0" layoutY="456.0" mnemonicParsing="false" onAction="#ensureDeleteMovie" text="确认删除" />
+								<Button fx:id="button_cancel_delete" layoutX="382.0" layoutY="456.0" mnemonicParsing="false" onAction="#cancelDelete" text="取消" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="数据库状态">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<AnchorPane prefHeight="511.0" prefWidth="760.0">
+									<children>
+										<Label layoutX="181.0" layoutY="129.0" text="注册用户数" />
+										<Label layoutX="199.0" layoutY="189.0" text="电影数" />
+										<Line endX="100.0" layoutX="374.0" layoutY="149.0" startX="-100.0" />
+										<Line endX="100.0" layoutX="374.0" layoutY="209.0" startX="-100.0" />
+										<Text fx:id="numberOfUser" layoutX="330.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+										<Text fx:id="numberOfMovie" layoutX="330.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Label layoutX="181.0" layoutY="246.0" text="涉及国家数" />
+                              <Label layoutX="202.0" layoutY="293.0" text="类型数" />
+                              <Line endX="100.0" layoutX="374.0" layoutY="266.0" startX="-100.0" />
+                              <Line endX="100.0" layoutX="374.0" layoutY="313.0" startX="-100.0" />
+                              <Text fx:id="country_num" layoutX="330.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="type_num" layoutX="330.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Button fx:id="download_user" layoutX="168.0" layoutY="373.0" mnemonicParsing="false" onAction="#downloadData_user" text="导出用户数据" />
+                              <Button fx:id="download_movie" layoutX="380.0" layoutY="373.0" mnemonicParsing="false" onAction="#downloadData_movie" text="导出电影数据" />
+                              <Text fx:id="download_notice" layoutX="258.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+									</children>
+								</AnchorPane>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<Label layoutX="14.0" layoutY="14.0" text="欢迎您使用电影管理系统管理员端！" textFill="#1212ee">
+			<font>
+				<Font size="18.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>

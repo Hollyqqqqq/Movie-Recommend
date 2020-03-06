@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0"
+	prefWidth="449.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller_Friend_request">
+	<children>
+		<Button fx:id="button_add" onAction="#add" layoutX="125.0"
+			layoutY="100.0" mnemonicParsing="false" text="添加好友" />
+		<Button fx:id="button_refuse" onAction="#refuse"
+			layoutX="268.0" layoutY="100.0" mnemonicParsing="false" text="拒绝请求" />
+	</children>
+</AnchorPane>

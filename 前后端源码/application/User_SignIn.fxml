@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.Controller_Main">
+	<children>
+		<Button fx:id="Button_dl" layoutX="220.0" layoutY="245.0"
+			mnemonicParsing="false" onAction="#SignIn" prefHeight="30.0"
+			prefWidth="57.0" text="登录" />
+		<Button fx:id="Button_zc" layoutX="132.0" layoutY="245.0"
+			mnemonicParsing="false" onAction="#SignUp" prefHeight="30.0"
+			prefWidth="57.0" text="注册" />
+		<Button fx:id="Button_gly" layoutX="300.0" layoutY="245.0"
+			mnemonicParsing="false" onAction="#ToAdminSignIn" text="管理员登录" />
+		<TextField fx:id="text_user" layoutX="220.0" layoutY="120.0" />
+		<Label layoutX="176.0" layoutY="125.0" text="账号"
+			textFill="#1a1e1d" />
+		<Label layoutX="174.0" layoutY="175.0" text="密码" />
+		<PasswordField fx:id="text_pass" layoutX="220.0"
+			layoutY="170.0" />
+		<Label layoutX="178.0" layoutY="45.0" prefHeight="37.0"
+			prefWidth="303.0" text="欢迎使用电影推荐系统" textAlignment="JUSTIFY"
+			textFill="#0f0fbf">
+			<font>
+				<Font size="28.0" />
+			</font>
+		</Label>
+		<Text fx:id="notice" layoutX="176.0" layoutY="232.0"
+			strokeType="OUTSIDE" strokeWidth="0.0" />
+		<Button fx:id="Button_findPass" onAction="#FindPass"
+			layoutX="430.0" layoutY="245.0" mnemonicParsing="false" text="忘记密码" />
+	</children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_SignUpNotice">
+   <children>
+      <Label layoutX="164.0" layoutY="37.0" text="注册成功！" textFill="#0990eb">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="Button_dl" layoutX="142.0" layoutY="221.0" mnemonicParsing="false" onAction="#ToSignIn" text="登录" />
+      <Button fx:id="Button_tc" layoutX="279.0" layoutY="221.0" mnemonicParsing="false" onAction="#Exit" text="退出" />
+      <Label layoutX="36.0" layoutY="97.0" text="您的账号为：">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="170.0" text="请牢记您的账号，这是您登陆的唯一凭证！" textFill="#eb0909" />
+      <Text fx:id="user" layoutX="183.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
